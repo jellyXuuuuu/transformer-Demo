@@ -2,8 +2,11 @@ Set up an architecture for Vision Transformer, in order to classify three car mo
 
 - Explain for the different python files:
 	The vit1.py is for the whole process;
+
 	The vit0.py is for training only while vit_eval.py is for evaluation only;
+
 	The training results are traning-loss.png & training-acc.png;
+
 	The eval result is 0.815833330154419 as the accuracy rate.
 
 - Changed 'Tensor.numpy()[0]' into float(Tensor) in order to avoid terminal warnings.
