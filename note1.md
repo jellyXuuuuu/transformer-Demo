@@ -13,6 +13,14 @@ Encoding: Input -> Positional Encoding
     PE_{pos,i} = sin(pos/10000^{2i/d_model}) 当i=偶数
     PE_{pos,i} = cos(pos/10000^{2i/d_model}) 当i=奇数
 
+ - 作者们使用了不同频率的正弦和余弦函数来作为位置编码:
+
+    1.每个位置有一个唯一的positional encoding. 
+
+    2.两个位置之间的关系可以通过他们位置编码间的仿射变换来建模(获得).
+ - sin, cos这种定义恰好能满足这样的特性。
+ - we can express the sine(x+k) and cosine(x+k) as a linear transformation of sin(x) and cos(x)
+
 基本框架:
 
     Self-Attention -> Feed Forward Neural Network
